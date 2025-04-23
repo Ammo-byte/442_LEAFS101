@@ -12,7 +12,7 @@ All analysis scripts live in `final_project.rmd`, covering:
 ## For Professor
 
 - **Infographic:** [Leafs101.pdf](leafs101.pdf) — high-level overview of key metrics.  
-- **In-Depth Report:** [Into_the_Leafs'_Verse.pdf]*Final Project: Into the Leafs’ Verse* — comprehensive analysis and methodology.  
+- **In-Depth Report:** [Into_the_Leafs'_Verse.pdf](Into_the_Leafs'_Verse.pdf)*Final Project: Into the Leafs’ Verse* — comprehensive analysis and methodology.  
 - **Presentation Video:** [YouTube Deep Dive](https://youtu.be/g2mUgGrDnyY) — narrated walkthrough of findings.  
 
 ## Installation
