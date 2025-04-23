@@ -161,10 +161,10 @@ library(ggplot2)
 library(viridis)
 library(sportyR)
 
-# 1) Read full‑season MoneyPuck data
+# read full‑season MoneyPuck data
 shots <- read_csv("Data/shots_2024.csv", show_col_types = FALSE)
 
-# 2) Filter for Toronto 5×5 on‑goal shots
+# filter for Toronto 5×5 on‑goal shots
 leaf_5v5 <- shots %>%
   filter(
     teamCode         == "TOR",
@@ -183,7 +183,7 @@ leaf_5v5 <- shots %>%
     y_plot  = arenaAdjustedYCord
   )
 
-# 3) Define the 12 Toronto forwards of interest
+# define the 12 Toronto forwards of interest
 forwards_list <- c(
   "Matthew Knies",   "Auston Matthews", "Mitch Marner",
   "Max Domi",        "John Tavares",    "William Nylander",
@@ -194,7 +194,7 @@ forwards_list <- c(
 leaf_forwards <- leaf_5v5 %>%
   filter(shooterName %in% forwards_list)
 
-# 4) Build & render the rink + forwards’ goals
+# build & render the rink + forwards’ goals
 leaf_plot <-
   geom_hockey(league = "NHL", display_range = "full") +   # rink background
   geom_point(                                            # forwards’ goal dots
@@ -233,11 +233,11 @@ leaf_plot <-
     legend.position  = "right"
   )
 
-# 5) Print count and plot
+# print count and plot
 total_goals <- nrow(leaf_forwards)
 cat("Total goals by selected forwards:", total_goals, "\n")
 
-# 6) Save the final plot (with legends & axes)
+# save the final plot (with legends & axes)
 ggsave(
   filename  = "leafs_forwards_goals_plot.png",
   plot      = leaf_plot,
