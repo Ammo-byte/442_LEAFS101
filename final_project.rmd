@@ -563,9 +563,9 @@ tierlist <- function(df,
   text(x=right_band, y=0.2, "Data: Money Puck", col="white", cex=1, adj=c(1,0))
 }
 
-# save tier list image using base R method
+# save tier list image 
 png("leafs_tier_list.png", width = 12, height = 12, units = "in", res = 600)
-tierlist(df)  # now title_cex will be used properly
+tierlist(df)  
 dev.off()
 
 tierlist(df)
